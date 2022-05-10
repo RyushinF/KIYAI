@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 cascade_path = 'cascade.xml'
-img_out_path = '//home/rice/デスクトップ/apple_cascade/cascade_test/out/img'
+img_out_path = '出力先パス'
 i = 0
 cap = cv2.VideoCapture(2)
 
@@ -16,7 +16,7 @@ while True:
     #rect[lefttop_x, y, width, height]
     if len(rect) > 0:
         for rect in rect:
-            cv2.imwrite(str(img_out_path) + str(i) + '.png', frame[rect[1] : rect[1] + rect[3], rect[0] : rect[0] + rect[2]])
+            cv2.imwrite(str(img_out_path) + 'img' + str(i) + '.png', frame[rect[1] : rect[1] + rect[3], rect[0] : rect[0] + rect[2]])
             cv2.imshow('apple', frame[rect[1] : rect[1] + rect[3], rect[0] : rect[0] + rect[2]])
             cv2.waitKey(1)
             print(rect)
