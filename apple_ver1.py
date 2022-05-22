@@ -10,7 +10,7 @@ cv2.namedWindow('redout', cv2.WINDOW_NORMAL)
 #モルフォロジー変換用
 kernel = np.ones((20, 20), np.uint8)
 
-def hoge(x):　#トラックバー用
+def hoge(x):    #トラックバー用
     pass
 
 #トラックバー作成
